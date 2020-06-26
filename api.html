@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body{
+			background-color:#006400;
+		}
+		h1{
+			font-size: 55px;
+			font-weight: bold;
+			 color:white;
+			 font-family:cursive;
+			 text-shadow: 3px 3px black;
+		}
+		.detail{
+			margin:auto;
+			align-items: center;
+			height:350px;
+			width: 700px;
+			background-color:#696969;
+			border: 2px solid white;
+			padding:10px;
+	
+			box-shadow:5px 5px white;
+			position: relative;
+		}
+		label{
+			text-align:center;
+			position: relative;
+			left:240px;
+			top:-15px;
+			text-underline-position: auto;
+			color:white;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 30px;
+			//padding:10px;
+			text-shadow: 2px 2px black; 
+
+
+		}
+		#nameid{
+			background-color: orange;
+			color:white;
+			height:25px;
+			position:relative;
+			top:15px;
+			left:25px;
+		} 
+		.img{
+			
+            margin:auto;
+			align-items: center;
+			height:350px;
+			width: 700px;
+			z-index: 1;
+			position: relative; 
+			top:-285px;
+			left:260px;
+
+		}
+		button{
+			margin:auto;
+			align-items: center;
+			height:40px;
+			width: 180px;
+			position: relative; 
+			top:-410px;
+			left:590px;
+			//padding:10px 30px;
+			background-color:#1E90FF;
+			z-index:1;
+
+		}
+		.centerDiv{
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h1>What does your name say about your personality?</h1>
+		<div class="centerDiv">
+			<div class="detail">
+				<label>Enter your name</label>
+		
+				<input type="text" name="name" id="nameid">
+			</div>
+			<div class="img">
+				<img src="cyber.png" height="200px" width="200px" class="imagechange">
+				
+			</div>
+			<div class="button">
+			
+			<button>click me</button>
+		</div>
+		
+		</div>
+
+	</section>
+	<!--<script src="http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-08&sortBy=publishedAt&apiKey=API_KEY"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				const name= $('#nameid').val();
+				//alert(name);
+				$('.imagechange').attr('src',`https://joeschmoe.io/api/v1/${name}`
+)
+			})
+		})
+	</script>
+
+</body>
+</html>
